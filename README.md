@@ -1,10 +1,12 @@
 # The-Role-of-Agency-and-Interactivity-for-Virtual-Training-of-Teaching-in-High-Poverty-Schools
 Virtual Training Platform for Academics
 Speech to Text Portion of this long term research 
-**
-For more information on this project, access the following files:**
+
+For more information on this project, access the following files:
 Ghanima_Abdullah ARESTY Project Plan: My personal acedemic goals for this project
+
 ARESTY Lightning Presentation: A short overview of the intentions of this project
+
 2020_NSF_Cyberlearning.pdf: An extensive explanation of this project
 
 
