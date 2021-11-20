@@ -1,0 +1,228 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: happy path 1
+  steps:
+  - user: |
+      hello there!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      amazing
+    intent: mood_great
+  - action: utter_happy
+
+- story: happy path 2
+  steps:
+  - user: |
+      hello there!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      amazing
+    intent: mood_great
+  - action: utter_happy
+  - user: |
+      bye-bye!
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: sad path 1
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      not good
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      yes
+    intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      not good
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      not really
+    intent: deny
+  - action: utter_goodbye
+
+- story: sad path 3
+  steps:
+  - user: |
+      hi
+    intent: greet
+  - action: utter_greet
+  - user: |
+      very terrible
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      no
+    intent: deny
+  - action: utter_goodbye
+
+- story: say goodbye
+  steps:
+  - user: |
+      bye-bye!
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+  - user: |
+      are you a bot?
+    intent: bot_challenge
+  - action: utter_iamabot
+
+- story: Sample story path 1
+  steps:
+  - user: |
+      Why are you keeping showing up late for school, Jason?
+    intent: why_late
+  - action: utter_excuse
+  - user: |
+       Alright, just make sure you catch up with the class.
+       OK?
+    intent: ask_catch_up_class
+  - action: utter_promise
+
+- story: Sample story path 2
+  steps:
+  - user: |
+      Why are you keeping showing up late for school, Jason?
+    intent: why_late
+  - action: utter_excuse
+  - user: |
+       I know you are lying.
+    intent: doubt
+  - user: |
+       Tell me exactly what happened or I will call your parents
+    intent: why_late
+  - action: utter_truth
+
+- story: Sample story path 3
+  steps:
+  - user: |
+      Why are you keeping showing up late for school, Jason?
+    intent: why_late
+  - action: utter_excuse
+  - user: |
+        I know you are not being honest.
+    intent: doubt
+  - user: |
+       But I will let it go for now.
+    intent: forgive
+  - action: utter_gratitude
+
+- story: Sample story path 4
+  steps:
+  - user: |
+      Are you alright? Jason
+    intent: concern_for_wellbeing
+  - action: utter_affirm
+  - action: utter_why_ask
+  - user: |
+        You are late for school. What is going on?
+    intent: why_late
+  - action: utter_excuse
+
+- story: Sample story path 5
+  steps:
+  - user: |
+      Are you alright? Jason
+    intent: concern_for_wellbeing
+  - action: utter_affirm
+  - action: utter_why_ask
+  - user: |
+        Don't act like you are not aware. You are late for school!
+    intent: blame
+  - action: utter_plead
+
+
+- story: Sample story path 6
+  steps:
+  - user: |
+      Are you alright? Jason
+    intent: concern_for_wellbeing
+  - action: utter_affirm
+  - action: utter_why_ask
+  - user: |
+         Nothing. See you tomorrow!
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: Sample story path 7
+  steps:
+  - user: |
+      Jason, you've been late for class three times.
+    intent: blame
+  - user: |
+         That's enough!
+    intent: blame 
+  - user: |
+        I need to talk to your parents.
+    intent: blame
+  - action: utter_plead
+  - user: |
+        OK, I can forgive you for this time.
+    intent: forgive
+  - action: utter_gratitude
+  - user: |
+        But tell me what happened?
+    intent: why_late
+  - action: utter_excuse
+
+- story: Sample story path 8
+  steps:
+  - user: |
+      Jason, you've been late for class three times.
+    intent: blame
+  - user: |
+         That's enough!
+    intent: blame 
+  - user: |
+        I need to talk to your parents.
+    intent: blame
+  - action: utter_plead
+  - user: |
+         No, your lateness is unacceptable.
+    intent: blame
+  - action: utter_gratitude
+  - user: |
+         I have to talk to your parents about it.
+    intent: blame
+  - action: utter_do_not_care
+
+
+- story: Sample story path 9
+  steps:
+  - user: |
+      Jason, you've been late for class three times.
+    intent: blame
+  - user: |
+         That's enough!
+    intent: blame 
+  - user: |
+        I need to talk to your parents.
+    intent: blame
+  - action: utter_plead
+  - user: |
+         I will make my decision based on your performance next time
+    intent: forgive
+  - action: utter_gratitude
