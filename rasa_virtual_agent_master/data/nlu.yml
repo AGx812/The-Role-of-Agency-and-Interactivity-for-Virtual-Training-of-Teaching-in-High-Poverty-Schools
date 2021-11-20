@@ -1,0 +1,133 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - gi
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: why_late
+  examples: |
+    - why are you late for school?
+    - what makes you late?
+    - tell me exactly why you late
+    - tell me what happened or I will call your parents
+    - you have to tell me what happened
+    - what is going on?
+    - what happened?
+- intent: forgive
+  examples: |
+    - ok, don't be late next time
+    - alright, I will forgive you this time
+    - I will forgive you
+    - show up early next time
+    - try to show up earily next time
+    - I will let it go
+- intent: blame
+  examples: |
+    - that is not an excuse
+    - I don't want to hear your excuse
+    - you will lose your point for being late
+    - I will record your absence
+    - your lateness is recorded
+    - I will put your name in the record for being late
+    - you should have shown up earlier
+    - I will not forgive you for being late
+    - your lateness is unforgivable
+    - you are late for school!
+    - I need talk to your parents
+    - That is enough!
+
+- intent: ask_catch_up_class
+  examples: |
+    - Make sure to catch up with class
+    - catch up what you missed
+
+- intent: concern_for_wellbeing
+  examples: |
+    - Are you OK?
+    - are you alright?
+    - how's it going?
+
+- intent: doubt
+  examples: |
+    - you are lying
+    - I don't believe you
+    - you are not being honest

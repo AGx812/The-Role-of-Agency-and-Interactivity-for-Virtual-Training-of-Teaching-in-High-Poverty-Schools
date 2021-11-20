@@ -1,0 +1,141 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Q1/R1
+  steps:
+  - intent: why_late
+  - action: utter_excuse
+  - checkpoint: check_question_two_one
+
+- story: Q1/R2
+  steps:
+  - intent: concern_for_wellbeing
+  - action: utter_affirm
+  - action: utter_why_ask
+  - checkpoint: check_question_two_two
+
+- story: Q1/R3
+  steps:
+  - intent: blame
+  - action: utter_plead
+  - checkpoint: check_question_two_three
+
+- story: Q2.1/R1
+  steps:
+  - checkpoint: check_question_two_one
+  - intent: ask_catch_up_class
+  - action: utter_promise
+
+- story: Q2.1/R2
+  steps:
+  - checkpoint: check_question_two_one
+  - intent: doubt
+  - intent: why_late
+  - action: utter_truth
+
+- story: Q2.1/R3
+  steps:
+  - checkpoint: check_question_two_one
+  - intent: doubt
+  - intent: forgive
+  - action: utter_gratitude
+
+- story: Q2.2/R1
+  steps:
+  - checkpoint: check_question_two_two
+  - intent: why_late
+  - action: utter_excuse
+
+- story: Q2.2/R2
+  steps:
+  - checkpoint: check_question_two_two
+  - intent: blame
+  - action: utter_plead
+
+- story: Q2.2/R3
+  steps:
+  - checkpoint: check_question_two_two
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Q2.3/R1
+  steps:
+  - checkpoint: check_question_two_three
+  - intent: forgive
+  - action: utter_gratitude
+  - intent: why_late
+  - action: utter_excuse
+
+- story: Q2.3/R2
+  steps:
+  - checkpoint: check_question_two_three
+  - intent: blame
+  - action: utter_do_not_care
+
+- story: Q2.3/R3
+  steps:
+  - checkpoint: check_question_two_three
+  - intent: forgive
+  - action: utter_gratitude
+
+# - story: late for class path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: why_late
+#   - action: utter_apology
+#   - action: utter_excuse
+#   - intent: forgive_late
+#   - action: utter_gratitude
+
+# - story: late for class path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: why_late
+#   - action: utter_apology
+#   - action: utter_excuse
+#   - intent: blame_late
+#   - action: utter_plead
+#   - intent: forgive_late
+#   - action: utter_gratitude
+
+# - story: late for class path 3
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: why_late
+#   - action: utter_apology
+#   - action: utter_excuse
+#   - intent: blame_late
+#   - action: utter_plead
+#   - intent: deny
+#   - action: utter_give_up
