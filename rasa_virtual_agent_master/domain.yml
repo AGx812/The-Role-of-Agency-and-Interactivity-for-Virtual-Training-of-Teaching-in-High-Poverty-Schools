@@ -1,0 +1,65 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+
+- ask_catch_up_class
+- why_late
+- concern_for_wellbeing
+- forgive
+- blame
+- doubt
+
+
+
+
+
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_excuse:
+  - text: I didn't catch the last bus to school
+  - text: My mom didn't wake me up this morning
+  utter_gratitude:
+  - text: Thank you!
+  - text: Thanks for your kindness!
+  utter_plead:
+  - text: Please, forgive me for this one time
+  - text: Please, I promise I will not do that again
+  utter_give_up:
+  - text: OK, I will not argue that
+  - text: I don't care, do whatever you like
+  utter_apology:
+  - text: I'm sorry
+  utter_why_ask:
+  - text: "What's the matter?"
+  utter_affirm:
+  - text: "Yes"
+  utter_promise:
+  - text: "I will"
+  utter_do_not_care:
+  - text: "I don't care"
+  utter_truth:
+  - text: "I don't want to come to class because I did not do my homework"
+# actions:
+#   - action_hello_world
+#   - action_print_intent
