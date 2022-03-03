@@ -1,5 +1,6 @@
 # The-Role-of-Agency-and-Interactivity-for-Virtual-Training-of-Teaching-in-High-Poverty-Schools
-Virtual Training Platform for Academics - Speech to Text Portion of this long term research 
+
+Virtual Training Platform for Academics - Basic Conversational AI  
 
 For more information on this project, access the following files:
 
